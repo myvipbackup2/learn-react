@@ -6,23 +6,24 @@ import React from 'react'
 import {Avatar, Timeline} from 'antd'
 
 /*const Comment = () => {
-    return (
-        <div>
-            <Avatar size="large">{this.props.author}</Avatar>
-            <Timeline>
-                <Timeline.Item>{this.props.date}</Timeline.Item>
-                <Timeline.Item>{this.props.children}</Timeline.Item>
-            </Timeline>
-        </div>
-    );
-};*/
+ return (
+ <div>
+ <Avatar size="large">{this.props.author}</Avatar>
+ <Timeline>
+ <Timeline.Item>{this.props.date}</Timeline.Item>
+ <Timeline.Item>{this.props.children}</Timeline.Item>
+ </Timeline>
+ </div>
+ );
+ };*/
 
-class Comment extends React.Component{
-    render(){
+class Comment extends React.Component {
+    render() {
         return (
-            <div>
-                <Avatar size="large">{this.props.author}</Avatar>
-                <Timeline>
+            <div style={{overflow: 'hidden'}}>
+                <Avatar style={{float: 'left', backgroundColor: this.props.color}}
+                        size="large">{this.props.author}</Avatar>
+                <Timeline style={{float: 'left', marginLeft: '3%', width: '80%'}}>
                     <Timeline.Item>{this.props.date}</Timeline.Item>
                     <Timeline.Item>{this.props.children}</Timeline.Item>
                 </Timeline>

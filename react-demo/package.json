@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "antd": "^2.11.0",
+    "axios": "^0.16.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.2.1",
+    "mockjs": "^1.0.1-beta3",
     "react-scripts": "1.0.7"
   },
   "scripts": {
@@ -22,10 +24,13 @@
       "react-app"
     ],
     "plugins": [
-      ["import", {
-        "libraryName": "antd",
-        "style": "css"
-      }]
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": "css"
+        }
+      ]
     ]
   }
 }
