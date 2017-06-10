@@ -25,9 +25,15 @@ class CommentFrom extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                this.props.onCommentSubmit(values);
             }
+            setTimeout(() => {
+                showLoading = false;
+                console.log(showLoading)
+            }, 1300)
         });
     };
+
 
     render() {
         const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;
@@ -54,7 +60,7 @@ class CommentFrom extends React.Component {
                         {getFieldDecorator('text', {
                             rules: [{required: true, message: '请输入内容!'}],
                         })(
-                            <Input prefix={<Icon type="message" style={{fontSize: 15}}/>} type="textarea" rows="5"
+                            <Input prefix={<Icon type="message" style={{fontSize: 15}}/>} type="textarea" rows="8"
                                    placeholder="内容"/>
                         )}
                     </FormItem>

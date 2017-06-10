@@ -4,6 +4,7 @@
 
 import React from 'react'
 import Comment from './Comment'
+import {Spin} from 'antd';
 
 class CommentList extends React.Component {
     render() {
@@ -16,9 +17,11 @@ class CommentList extends React.Component {
         });
         return (
             <div style={{width: '40%', margin: '2% 5%', float: 'left'}}>
-                <h2>评论列表:</h2>
+                <h2>{this.props.title}</h2>
                 <hr style={{marginBottom: '20px'}}/>
-                {commentNode}
+                <Spin spinning={this.props.loading} size="large">
+                    {commentNode}
+                </Spin>
             </div>
         );
     }

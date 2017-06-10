@@ -5,9 +5,9 @@
 import React from 'react';
 import ReactDom from 'react-dom'
 import 'antd/dist/antd.css';
-import App from './App'
+import CommentBox from './components/commentBox'
 
 ReactDom.render(
-    <App url="/commentList" />,
+    <CommentBox url="/commentList" header="React留言板" title="留言列表"/>,
     document.getElementById('root')
 );
