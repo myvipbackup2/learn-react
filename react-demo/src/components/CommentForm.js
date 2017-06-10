@@ -27,10 +27,6 @@ class CommentFrom extends React.Component {
                 console.log('Received values of form: ', values);
                 this.props.onCommentSubmit(values);
             }
-            setTimeout(() => {
-                showLoading = false;
-                console.log(showLoading)
-            }, 1300)
         });
     };
 
@@ -65,9 +61,7 @@ class CommentFrom extends React.Component {
                         )}
                     </FormItem>
                     <Button disabled={ hasErrors(getFieldsError())} type="primary" htmlType="submit">
-                        {showLoading &&
-                        <Icon type="loading"/>
-                        }
+                        {showLoading && <Icon type="loading"/>}
                         发表
                     </Button>
                 </Form>

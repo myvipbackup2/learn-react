@@ -3,19 +3,7 @@
  */
 
 import React from 'react'
-import {Avatar, Timeline, Alert} from 'antd'
-
-/*const Comment = () => {
- return (
- <div>
- <Avatar size="large">{this.props.author}</Avatar>
- <Timeline>
- <Timeline.Item>{this.props.date}</Timeline.Item>
- <Timeline.Item>{this.props.children}</Timeline.Item>
- </Timeline>
- </div>
- );
- };*/
+import {Avatar, Timeline} from 'antd'
 
 class Comment extends React.Component {
     render() {

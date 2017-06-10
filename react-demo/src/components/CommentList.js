@@ -17,7 +17,7 @@ class CommentList extends React.Component {
         });
         return (
             <div style={{width: '40%', margin: '2% 5%', float: 'left'}}>
-                <h2>{this.props.title}</h2>
+                <h2>{this.props.title}({commentNode.length})</h2>
                 <hr style={{marginBottom: '20px'}}/>
                 <Spin spinning={this.props.loading} size="large">
                     {commentNode}
