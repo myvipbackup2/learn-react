@@ -1,7 +1,5 @@
-'use strict';
-
 import React from 'react'
-import {DatePicker} from 'antd'
+import {Row,Col} from 'antd'
 
 
 /*class CommentBox extends React.Component {
@@ -15,13 +13,16 @@ import {DatePicker} from 'antd'
     }
 }*/
 
-const CommentBox = () => {
+const Header = () => {
     return(
-        <div className="ui comments">
-            <h1>评论</h1>
-            <DatePicker />
+        <div style={{padding:'20px'}}>
+            <Row>
+                <Col span={24}>
+                    <h1 style={{textAlign:'center'}}>React留言板</h1>
+                </Col>
+            </Row>
         </div>
     );
 };
 
-export default CommentBox;
+export default Header;
