@@ -12,12 +12,16 @@ import '../mock'
 
 class App extends React.Component {
 
-    constructor(props) {
+    constructor(props) {  //初始化state
         super(props);
         this.state = {
             data: [],
             loading: true
         };
+    }
+
+    componentDidMount() {  //组件挂在完成，请求数据
+        console.log('component did mount');
         getData(this.props.url).then(res => {
             this.setState({
                 data: res.data,
@@ -27,7 +31,7 @@ class App extends React.Component {
         });
     }
 
-    handleCommentSubmit = (comment) => {
+    handleCommentSubmit = (comment) => {  //父子组件通信的回调函数，这里使用箭头函数避免丢失this
         console.log(comment);
         this.setState({
             data: [{

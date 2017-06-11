@@ -2,14 +2,13 @@
 
 `Some React Demos`
 
-`使用 babel-plugin-import`
-
-
-###一个简易的react留言板
+##一个简易的react留言板 
+`React-messageBox-demo`
 
 使用 `create-react-app`
 
-使用蚂蚁金服的 `Ant Design React UI库`
+使用蚂蚁金服的 `Ant Design React UI库 使用 babel-plugin-import 按需加载`
+
 
 使用了`axios` 来请求ajax数据
 

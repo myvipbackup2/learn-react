@@ -8,7 +8,7 @@ import {Form, Icon, Input, Button} from 'antd';
 const FormItem = Form.Item;
 let showLoading = false;  //显示loading
 
-function hasErrors(fieldsError) {
+function hasErrors(fieldsError) {  //检查有无错误
     return Object.keys(fieldsError).some(field => fieldsError[field]);
 }
 
@@ -20,12 +20,12 @@ class CommentFrom extends React.Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault();  //阻止表单提交的默认行为
         showLoading = true;
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                this.props.onCommentSubmit(values);
+                this.props.onCommentSubmit(values);  //父组件commentBox的回调函数，用于组件通信
             }
         });
     };

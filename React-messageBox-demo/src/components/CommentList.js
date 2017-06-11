@@ -8,7 +8,7 @@ import {Spin} from 'antd';
 
 class CommentList extends React.Component {
     render() {
-        let commentNode = this.props.data.map((comment, index) => {
+        let commentNode = this.props.data.map((comment, index) => {  //使用ES6的map方法
             return (
                 <Comment key={index} color={comment.color} author={comment.author} date={comment.date}>
                     {comment.text}
